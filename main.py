@@ -16,7 +16,7 @@ while True:
     for container in containers:
         title = container.findAll("div", {"class": "layer"})[0]
         main_link = title.a["href"]
-        link = f"https://gb.saveesoo.com{main_link}".replace('\n', '')
+        link = f"https://gb.savesoo.com{main_link}".replace('\n', '')
         product = (main_link.split("/review-product/")[-1]).replace("-", " ").replace('\n', '')[6:]
         f.write(f"{str(page_num)},{product.replace(',', '|')},{link}\n")
         print(f"{page_num},{product},{link}")
